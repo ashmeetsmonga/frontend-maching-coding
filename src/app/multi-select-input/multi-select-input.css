@@ -1,0 +1,91 @@
+.wrapper {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.container {
+  width: 500px;
+  position: relative;
+}
+
+.multi-select-input {
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  > input {
+    max-width: 100%;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px;
+  }
+  > input:focus {
+    outline: none;
+  }
+
+  .pill {
+    padding: 5px 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 5px;
+    > img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.search-suggestions-container {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  > li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+
+    > img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+  > li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(192, 192, 192);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
