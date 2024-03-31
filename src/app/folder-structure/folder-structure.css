@@ -1,10 +1,52 @@
-.container {
+.folder-structure-container {
+  position: relative;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   > h2 {
     margin-top: 50px;
+  }
+}
+
+.new-file-folder-modal-container {
+  background-color: white;
+  width: 50vw;
+  padding: 30px 40px 40px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+
+  > h2 {
+    color: black;
+  }
+
+  .input-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    > input {
+      width: 100%;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+    }
+    > input:focus {
+      outline: none;
+    }
+
+    > button {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
   }
 }
 
@@ -23,13 +65,18 @@
   border-radius: 10px;
   margin-bottom: 5px;
   font-size: 10px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
 }
 
 .folder {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 }
 
 .inside-files {
