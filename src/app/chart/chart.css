@@ -1,0 +1,56 @@
+.chart {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    margin-top: 50px;
+    width: 700px;
+    height: 700px;
+    position: relative;
+
+    .bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      height: 100%;
+
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+
+      .bar {
+        width: 100%;
+        position: relative;
+        transition: height 0.5s linear;
+      }
+
+      .bar:hover::after {
+        content: attr(data-tooltip);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        z-index: 10;
+      }
+    }
+
+    .x-axis-title {
+      color: white;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .y-axis-title {
+      position: absolute;
+      top: 50%;
+      transform: rotate(-90deg);
+      left: -100px;
+    }
+  }
+}
